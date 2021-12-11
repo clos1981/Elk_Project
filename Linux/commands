@@ -1,0 +1,11 @@
+set up SSh key:
+sudo docker container list -a
+sudo docker start laughing_swirles
+sudo docker attach laughing_swirles
+cat ~/.ssh/id_rsa.pub
+nano elk_project.yml
+ansible-playbook elk_project.yml
+sudo docker ps
+root@117edc8d456c:~# cd etc/ansible
+curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml
+nano filebeat-playbook.yml
