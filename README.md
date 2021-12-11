@@ -53,24 +53,25 @@ Machines within the network can only be accessed by Jump Box.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | My IP               | 10.0.0.1 10.0.0.2    |
-| Web 1    | My IP               |                      |
-| Web 2    | My IP               |                      |
-| EPVM-1   | My IP               |                      |
+| Jump Box | yes                 | My IP                |
+| Web 1    | no                  | 10.0.0.12            |
+| Web 2    | no                  | 10.0.0.13            |
+| EPVM-1   | yes                 | My IP                |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Service running can be limited, systems installation and update can be streamlined, and processes become more replicable.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install docker.io
+- Install python3-pip3
+- Install Docker Python module
+- Increase memory for the Elk stack.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![docker ps output](./Diagrams/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
