@@ -80,7 +80,7 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 - Filebeat.
- -Metricbeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 -Filebeat: Filebeat collect and monitors the log directories from VMs that are running, tails the files and sends them to elasticsearch or logstash.
