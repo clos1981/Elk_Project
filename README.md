@@ -26,11 +26,11 @@ Load balancing ensures that the application will be highly available, in additio
 -The advantages of a Jump Box is that it helps minimize attacks by ensuring remote connections to the cloud come through one VM.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Configuration and system files.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat is used to monitor log files.
+- Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -43,19 +43,20 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet.
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 20.124.13.26
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by Jump Box.
+- The jump Box allows you to access the Elk VM. The IP address is 10.0.0.11
 
-A summary of the access policies in place can be found in the table below.
+ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | My IP               | 10.0.0.1 10.0.0.2    |
+| Web 1    | My IP               |                      |
+| Web 2    | My IP               |                      |
+| EPVM-1   | My IP               |                      |
 
 ### Elk Configuration
 
