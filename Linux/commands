@@ -19,3 +19,4 @@ chmod +x failed_login_attempts.sh
  ash failed_login_attempts.sh
 sudo apt install stress
 sudo stress --cpu 1
+wget 10.0.0.12
