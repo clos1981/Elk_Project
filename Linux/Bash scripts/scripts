@@ -1,5 +1,15 @@
+Failed login attempts
+
 #!/bin/bash
 
 # Failed log in attempts on server  10.0.0.10
 
 for i in {1..1000}; do ssh azdmin@10.0.0.10; done
+
+wget bash script.
+
+#!/bin/bash
+
+# Many web request for server  10.0.0.12
+
+for i in {1..1000}; do wget 10.0.0.12; done
