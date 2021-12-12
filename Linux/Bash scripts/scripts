@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Failed log in attempts on server  10.0.0.10
+
+for i in {1..1000}; do ssh azdmin@10.0.0.10; done
