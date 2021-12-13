@@ -1,0 +1,10 @@
+#this logrotate.conf file will configure
+#a log rotation scheme that backus up authentation messages
+#to the /var/log/auth.log directory
+/var/log/auth.log {
+    weekly
+    rotate 7
+    delaycompression
+    noifempty
+    missingok
+}
